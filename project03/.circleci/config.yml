@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  pong:
+    docker:
+      - image: cimg/base:2021.07
+    steps:
+      - checkout
+      - run: echo 'pong'
+
+workflows:
+  output:
+    jobs:
+      - pong

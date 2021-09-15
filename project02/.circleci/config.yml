@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  ken:
+    docker:
+      - image: cimg/base:2021.07
+    steps:
+      - checkout
+      - run: echo 'ken'
+
+workflows:
+  output:
+    jobs:
+      - ken
